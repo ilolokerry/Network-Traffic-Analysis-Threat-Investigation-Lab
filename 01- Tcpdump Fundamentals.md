@@ -47,85 +47,72 @@ The lab also explored hexadecimal and ASCII packet analysis, FTP traffic capture
 
 The first step was verifying communication between the two systems.
 
-## Verify Connectivity
+ Verify Connectivity
 
 The Kali machine successfully communicated with the Metasploitable machine using ICMP ping requests.
 
 ```bash
 ping 10.0.0.11
 ```
-
-📸 Screenshot Placeholder:
 - Successful ping from Kali to Metasploitable
 - ICMP replies visible
 
 ---
 
-## Access Tcpdump Manual
+Access Tcpdump Manual
 
 The Tcpdump manual page was accessed to review command syntax and options.
 
 ```bash
 man tcpdump
 ```
-
-📸 Screenshot Placeholder:
-- Tcpdump manual page
-
 ---
 
-## Display Network Interfaces
+Display Network Interfaces
 
 The following command was used to display available interfaces on the system.
 
 ```bash
 tcpdump -D
 ```
-
-The Ethernet and loopback interfaces were identified for packet capture.
-
-📸 Screenshot Placeholder:
+![plain](https://github.com/ilolokerry/Network-Traffic-Analysis-Threat-Investigation-Lab/blob/811fb337c56b363fb94703de5c3836a6534761a0/images/tcpdump/intgerface%20listed.png)
 - Tcpdump interface list
-- Ethernet and loopback interfaces visible
-
+  
 ---
 
 # Part 2 – Sniffing Network Traffic
 
 Network traffic capture was performed on the Ethernet interface.
 
-## Start Packet Capture
+ Start Packet Capture
 
 ```bash
 sudo tcpdump -i eth0
 ```
 
-A second terminal was opened and a ping to Google was performed to generate network traffic.
+A second terminal was opened and a ping to Google (8.8.8.8) was performed to generate network traffic.
 
 The capture displayed ICMP request and reply packets between systems.
 
-📸 Screenshot Placeholder:
-- Tcpdump capturing live ICMP traffic
-- Request and reply packets
+![ping](https://github.com/ilolokerry/Network-Traffic-Analysis-Threat-Investigation-Lab/blob/811fb337c56b363fb94703de5c3836a6534761a0/images/tcpdump/gogglr%20ping.png)
+![details](https://github.com/ilolokerry/Network-Traffic-Analysis-Threat-Investigation-Lab/blob/811fb337c56b363fb94703de5c3836a6534761a0/images/tcpdump/goggle%20detail.png)
+- Tcpdump capturing live ICMP traffic with Request and reply packets
 
 ---
 
-## Analyze Hexadecimal and ASCII Data
+Analyze Hexadecimal and ASCII Data
 
-The following command was used to inspect packet payloads in hexadecimal and ASCII format.
+The following command was used to inspect packet payloads in hexadecimal and ASCII format to  get more information of the packets.
 
 ```bash
 sudo tcpdump -i eth0 -X
 ```
 
 Ping traffic was generated again between Kali and the Metasploitable machine to observe packet contents.
+![hex](https://github.com/ilolokerry/Network-Traffic-Analysis-Threat-Investigation-Lab/blob/811fb337c56b363fb94703de5c3836a6534761a0/images/tcpdump/hex%20ping.png)
+![details](https://github.com/ilolokerry/Network-Traffic-Analysis-Threat-Investigation-Lab/blob/811fb337c56b363fb94703de5c3836a6534761a0/images/tcpdump/hex%20data.png)
 
 The packet capture displayed the transmitted data (`01234567`) and the identical reply from the target system, confirming successful communication between both hosts.
-
-📸 Screenshot Placeholder:
-- Hexadecimal packet output
-- ASCII packet output
-- Visible transmitted payload data
 
 ---
 
