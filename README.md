@@ -60,7 +60,7 @@ The lab was designed to develop practical SOC analyst and network security inves
 
 Performed packet capture and traffic sniffing using Tcpdump to analyze network communications, inspect packet payloads, and study hexadecimal and ASCII traffic data.
 
-🔗 Project Link:
+🔗 [Packet capture and analysis](https://github.com/ilolokerry/Network-Traffic-Analysis-Threat-Investigation-Lab/blob/main/01-%20Tcpdump%20Fundamentals.md)
 
 ---
 
