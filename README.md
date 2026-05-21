@@ -68,7 +68,7 @@ Performed packet capture and traffic sniffing using Tcpdump to analyze network c
 
 Used wireshark to perform packet inspection, protocol analysis, traffic filtering, and session investigation within captured network traffic.
 
-🔗 Project Link: 
+🔗 [network packet analysis](https://github.com/ilolokerry/Network-Traffic-Analysis-Threat-Investigation-Lab/blob/main/02-%20Wireshark%20Fundamentals.md)
 ---
 
 # Malware Traffic Analysis
