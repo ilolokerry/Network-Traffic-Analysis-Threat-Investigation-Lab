@@ -124,7 +124,7 @@ Three terminals were used during this exercise.
 
 ---
 
-## Start Packet Capture
+ Start Packet Capture
 
 ```bash
 sudo tcpdump -i eth0 -X
@@ -132,7 +132,7 @@ sudo tcpdump -i eth0 -X
 
 ---
 
-## Open Listener on Port 4444
+ Open Listener on Port 4444
 
 ```bash
 nc -l -p 4444
@@ -142,7 +142,7 @@ This command opened port `4444` and started a listener waiting for incoming conn
 
 ---
 
-## Connect to the Listener
+Connect to the Listener
 
 ```bash
 nc 127.0.0.1 4444
@@ -154,9 +154,8 @@ Basic text and information were transmitted and successfully observed within the
 
 This exercise demonstrated how communication data can be monitored and inspected during network traffic analysis.
 
-📸 Screenshot Placeholder:
-- Netcat listener running
-- Connection established between terminals
+![netcat](https://github.com/ilolokerry/Network-Traffic-Analysis-Threat-Investigation-Lab/blob/94478c21e83374242228789b3b65466d29e7b708/images/tcpdump/netcat.png)
+![details](https://github.com/ilolokerry/Network-Traffic-Analysis-Threat-Investigation-Lab/blob/94478c21e83374242228789b3b65466d29e7b708/images/tcpdump/net%20traffic.png)
 - Tcpdump capturing transmitted text
 
 ---
@@ -167,7 +166,7 @@ An FTP communication session was captured and analyzed using Tcpdump.
 
 ---
 
-## Save Packet Capture to PCAP File
+ Save Packet Capture to PCAP File
 
 ```bash
 sudo tcpdump -i eth0 -w file.pcap
@@ -175,12 +174,9 @@ sudo tcpdump -i eth0 -w file.pcap
 
 This command captured live traffic and saved it into a `.pcap` file for later analysis.
 
-📸 Screenshot Placeholder:
-- Tcpdump writing packets to file.pcap
-
 ---
 
-## Connect to FTP Service
+ Connect to FTP Service
 
 From a second terminal, an FTP connection was initiated to the Metasploitable machine.
 
@@ -190,46 +186,28 @@ ftp 10.0.0.11
 
 A valid username and password were entered successfully to establish the connection.
 
-📸 Screenshot Placeholder:
-- FTP login prompt
-- Successful FTP authentication
-
+![ftp](https://github.com/ilolokerry/Network-Traffic-Analysis-Threat-Investigation-Lab/blob/94478c21e83374242228789b3b65466d29e7b708/images/tcpdump/ftp%20cap.png)
+- Successful FTP communication
 ---
 
-## Read Captured PCAP File
+ Read Captured PCAP File
 
 After stopping the packet capture, the following command was used to inspect the saved traffic.
 
 ```bash
 sudo tcpdump -r file.pcap -X
 ```
-
+![ftp details](https://github.com/ilolokerry/Network-Traffic-Analysis-Threat-Investigation-Lab/blob/94478c21e83374242228789b3b65466d29e7b708/images/tcpdump/ftp%20details.png)
 The captured FTP session displayed important protocol information such as:
 - Login requests
 - Authentication responses
 - FTP communication details
 - Packet payload contents
 
-📸 Screenshot Placeholder:
-- Reading the PCAP file
+![ftp details](https://github.com/ilolokerry/Network-Traffic-Analysis-Threat-Investigation-Lab/blob/94478c21e83374242228789b3b65466d29e7b708/images/tcpdump/pcap%20hex.png)
 - FTP traffic visible in capture
-- Login request and success messages
-
 ---
 
-# Skills Demonstrated
-
-- Packet capture and filtering
-- ICMP traffic analysis
-- Hexadecimal and ASCII packet inspection
-- Protocol analysis
-- FTP traffic investigation
-- PCAP analysis
-- Network traffic monitoring
-- Basic network forensics
-- Packet-level communication analysis
-
----
 
 # Key Learning Outcomes
 
