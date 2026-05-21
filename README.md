@@ -5,7 +5,7 @@
 
 # Project Overview
 
-This project is a hands-on network traffic analysis and threat investigation lab focused on monitoring, capturing, and analyzing network communications using :contentReference[oaicite:0]{index=0} and :contentReference[oaicite:1]{index=1}.
+This project is a hands-on network traffic analysis and threat investigation lab focused on monitoring, capturing, and analyzing network communications using Tcpdump and wireshark .
 
 The lab was designed to develop practical SOC analyst and network security investigation skills through packet capture, protocol analysis, malware traffic inspection, and threat investigation workflows.
 
