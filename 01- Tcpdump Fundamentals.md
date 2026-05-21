@@ -5,7 +5,7 @@
 
 # Project Overview
 
-This hands-on lab focused on learning the fundamentals of :contentReference[oaicite:0]{index=0} through network traffic capture, packet inspection, and protocol analysis within a controlled lab environment.
+This hands-on lab focused on learning the fundamentals of Tcpdump through network traffic capture, packet inspection, and protocol analysis within a controlled lab environment.
 
 Using Kali Linux and Metasploitable virtual machines, network communication was monitored and analyzed to understand how packets travel across a network and how traffic can be inspected using packet capture tools.
 
@@ -131,7 +131,7 @@ The packet capture displayed the transmitted data (`01234567`) and the identical
 
 # Part 3 – Simulating Communication with Netcat
 
-A basic communication channel was created using :contentReference[oaicite:1]{index=1} while Tcpdump monitored the traffic in real time.
+A basic communication channel was created using   Tcpdump while Tcpdump monitored the traffic in real time.
 
 Three terminals were used during this exercise.
 
